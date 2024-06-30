@@ -22,7 +22,7 @@ const HomeScreen = () => {
         </Pressable>
       ),
     });
-  }, []);
+  }, [navigation]);
 
   return (
     <View style={globalStyles.container}>
