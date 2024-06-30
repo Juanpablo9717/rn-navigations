@@ -1,5 +1,6 @@
-import {View, Text} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
+import {View, Text} from 'react-native';
 import {globalStyles} from '../../theme/theme';
 import {FlatList} from 'react-native-gesture-handler';
 import PrimaryButton from '../../components/shared/PrimaryButton';

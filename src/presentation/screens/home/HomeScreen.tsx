@@ -1,5 +1,5 @@
-import {View} from 'react-native';
 import React from 'react';
+import {View} from 'react-native';
 import {globalStyles} from '../../theme/theme';
 import {type NavigationProp, useNavigation} from '@react-navigation/native';
 import PrimaryButton from '../../components/shared/PrimaryButton';

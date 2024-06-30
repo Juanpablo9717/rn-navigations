@@ -1,5 +1,6 @@
-import {View, Text} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
 import React, {useEffect} from 'react';
+import {View, Text} from 'react-native';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {RootStackParams} from '../../routes/StackNavigator';
 import {globalStyles} from '../../theme/theme';
