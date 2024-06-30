@@ -1,4 +1,6 @@
 import React from 'react';
+import {Platform} from 'react-native';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {createStackNavigator} from '@react-navigation/stack';
 
 // Screens
@@ -17,10 +19,13 @@ export type RootStackParams = {
 const Stack = createStackNavigator<RootStackParams>();
 
 export const StackNavigator = () => {
+  const {top} = useSafeAreaInsets();
+
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        // Avoiding jumps when rendering the stack with useSafeAreaInsets
+        headerStatusBarHeight: Platform.OS === 'android' ? top : top - 5,
         headerStyle: {
           shadowColor: 'transparent',
           elevation: 0,

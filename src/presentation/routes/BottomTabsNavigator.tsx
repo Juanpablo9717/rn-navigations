@@ -3,9 +3,9 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Tab1Screen from '../screens/tabs/Tab1Screen';
 import {globalColors} from '../theme/theme';
-import {Text} from 'react-native';
 import {TopTabNavigator} from './TopTabsNavigator';
 import {StackNavigator} from './StackNavigator';
+import IonIcon from '../components/shared/IonIcon';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,6 +16,7 @@ export const BottomTabNavigator = () => {
         backgroundColor: globalColors.background,
       }}
       screenOptions={{
+        tabBarActiveTintColor: globalColors.primary,
         tabBarLabelStyle: {
           marginBottom: 5,
         },
@@ -27,24 +28,31 @@ export const BottomTabNavigator = () => {
       <Tab.Screen
         name="Tab1"
         options={{
-          title: 'Tab1',
-          tabBarIcon: ({color}) => <Text style={{color}}>Tab1 </Text>,
+          title: 'Home',
+          tabBarIcon: ({color}) => (
+            <IonIcon name="file-tray-outline" color={color} />
+          ),
         }}
         component={Tab1Screen}
       />
       <Tab.Screen
         name="Tab2"
         options={{
-          title: 'Tab2',
-          tabBarIcon: ({color}) => <Text style={{color}}>Tab2 </Text>,
+          title: 'Games',
+          tabBarIcon: ({color}) => (
+            <IonIcon name="game-controller-outline" color={color} />
+          ),
         }}
         component={TopTabNavigator}
       />
       <Tab.Screen
         name="Tab3"
         options={{
-          title: 'Tab3',
-          tabBarIcon: ({color}) => <Text style={{color}}>Tab3 </Text>,
+          headerShown: false,
+          title: 'Music',
+          tabBarIcon: ({color}) => (
+            <IonIcon name="headset-outline" color={color} />
+          ),
         }}
         component={StackNavigator}
       />
