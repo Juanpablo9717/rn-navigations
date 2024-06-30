@@ -1,10 +1,11 @@
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 
 export default function App() {
   return (
-    <View style={{flex: 1}}>
-      <Text>App</Text>
-    </View>
+    <NavigationContainer>
+      <Text>App.TSX --------</Text>
+    </NavigationContainer>
   );
 }
