@@ -20,7 +20,7 @@ export const StackNavigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: true,
+        headerShown: false,
         headerStyle: {
           shadowColor: 'transparent',
           elevation: 0,
