@@ -10,7 +10,14 @@ const Stack = createStackNavigator();
 
 export const StackNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: true,
+        headerStyle: {
+          shadowColor: 'transparent',
+          elevation: 0,
+        },
+      }}>
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Products" component={ProductsScreen} />
       <Stack.Screen name="Settings" component={SettingsScreen} />
