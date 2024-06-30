@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Text, View, useWindowDimensions} from 'react-native';
+import {View, useWindowDimensions} from 'react-native';
 import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
@@ -11,6 +11,7 @@ import {
 import {StackNavigator} from './StackNavigator';
 import ProfileScreen from '../screens/profile/ProfileScreen';
 import {globalColors} from '../theme/theme';
+import {BottomTabNavigator} from './BottomTabsNavigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -30,7 +31,8 @@ export const DrawerNavigator = () => {
           borderRadius: 100,
         },
       }}>
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+      {/* <Drawer.Screen name="StackNavigator" component={StackNavigator} /> */}
+      <Drawer.Screen name="Tabs" component={BottomTabNavigator} />
       <Drawer.Screen name="Profile" component={ProfileScreen} />
     </Drawer.Navigator>
   );
@@ -49,7 +51,6 @@ const CustomDrawerContent = (props: DrawerContentComponentProps) => {
       />
 
       <DrawerItemList {...props} />
-      <Text>Hola mundo</Text>
     </DrawerContentScrollView>
   );
 };
